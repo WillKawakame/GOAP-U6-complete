@@ -1,4 +1,4 @@
-using UnityEngine; // Necessário para Random
+using UnityEngine; 
 
 public class TestGame : GoapAction
 {
@@ -22,7 +22,6 @@ public class TestGame : GoapAction
         {
             pcStatus.SetState(Computer.ComputerState.InUse);
         }
-        // ---------------------------------------------
 
         return true;
     }
@@ -34,13 +33,11 @@ public class TestGame : GoapAction
 
         if (goapAgent != null)
         {
-            // Gera um feedback aleatório (Good, Bad, ou Buggy)
-            int randomFeedback = Random.Range(1, 4); // Gera 1, 2, ou 3
+            int randomFeedback = Random.Range(1, 4); 
             goapAgent.currentFeedback = (FeedbackType)randomFeedback;
 
             Debug.Log($"Tester gerou feedback: {goapAgent.currentFeedback}");
         }
-        // ------------------------------------------
 
         return true;
     }
